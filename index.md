@@ -1,9 +1,9 @@
 <html>
 <body>
 
-<h1>My First Heading</h1>
+<h1>Welcome to Potato SMP</h1>
 
-<p>My first paragraph.</p>
+<p>The server IP is: "play.potatoserver.xyz"</p>
 
 </body>
 </html>
