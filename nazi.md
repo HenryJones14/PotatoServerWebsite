@@ -4,14 +4,14 @@
 </head>
 <body>
 
-<h1>The picture element</h1>
+<h1>Hitler did nothing wrong!</h1>
 
-<p>Resize the browser window to load different images.</p>
+<p>He just tryed to clean the world</p>
 
 <picture>
-  <source media="(min-width:650px)" srcset="img_pink_flowers.jpg">
-  <source media="(min-width:465px)" srcset="img_white_flower.jpg">
-  <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+  <source media="(min-width:650px)" srcset="flag.jpg">
+  <source media="(min-width:465px)" srcset="flag.jpg">
+  <img src="flag.jpg" alt="Hail Hitler" style="width:auto;">
 </picture>
 
 </body>
