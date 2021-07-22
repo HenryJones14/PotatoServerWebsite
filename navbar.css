@@ -1,0 +1,40 @@
+/* Add a black background color to the top navigation bar */
+.topnav {
+   overflow: hidden;
+   background-image: linear-gradient(#eee7f5 85%, #623791 85%);
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+   float: left;
+   display: block;
+   color: black;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+   background-image: linear-gradient(#a26eda 85%, #623791 85%);
+   color: white;
+}
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+   background-color: #623791;
+   color: white;
+   padding-left: 13px;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type="text"] {
+   width: 25%;
+   float: right;
+   padding: 6px;
+   border: none;
+   margin-top: 4px;
+   margin-right: 7px;
+   font-size: 17px;
+}

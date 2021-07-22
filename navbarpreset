@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="default.css" />
+      <link rel="stylesheet" href="navbar.css" />
+   </head>
+   <body>
+      <div class="topnav">
+         <a href="/index.html">Home</a>
+         <a class="active" href="/MainPage.html">Main Page</a>
+         <a href="/ContactMe.html">Contact Me</a>
+         <input type="text" placeholder="Search.." />
+      </div>
+   </body>
+</html>
