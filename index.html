@@ -1,87 +1,61 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | ChessEmpires</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-  </head>
-  <body>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
+<html>
+   <head>
+      <link rel="stylesheet" href="default.css" />
+      <link rel="stylesheet" href="navbar.css" />
+   </head>
+   <body>
+      <div class="topnav">
+         <a class="active" href="/index.html">Home</a>
+         <a href="/MainPage.html">Main Page</a>
+         <a href="/ContactMe.html">Contact Me</a>
+         <input type="text" placeholder="Search.." />
       </div>
-      <div id="unity-mobile-warning">
-        WebGL builds are not supported on mobile devices.
+
+      <div>
+         <img src="images/BuildingCrop.PNG" alt="Your Image" class="left" />
+         <h2>What is this website for?</h2>
+         <p class="right">
+            &emsp; I made this website so I could learn HTML and website design.
+            It is also a place where I can store a coherent list of changes I
+            would make to “fix” Fortnite Competitive. This whole list of changes
+            is only my opinion! Please don't get offended by it just because you
+            like to w-key.
+            <br />
+            <br />&emsp; All of the changes are thought through as if Fortnite
+            would be a survival PVP game. That means that the changes will award
+            consistent players that can outlive others. Some other changes are
+            made so it would be harder for “bush campers” to outplace the better
+            players.
+         </p>
       </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">ChessEmpires</div>
+
+      <hr />
+
+      <div>
+         <img
+            src="images/StormCrop.PNG"
+            alt="Your Image"
+            class="right"
+            style="transform: scaleX(-1)"
+         />
+         <h2>So... What now?</h2>
+         <p class="left">
+            &emsp; Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reiciendis accusamus obcaecati velit beatae amet iure consequuntur
+            similique sit eligendi necessitatibus libero ut expedita quod
+            maiores earum distinctio ab, architecto hic. Iste accusamus ipsum
+            maxime qui vero harum quidem doloribus natus exercitationem
+            corporis. Exercitationem vitae atque alias inventore. Doloremque hic
+            adipisci alias dolore, amet vitae fugiat perferendis veniam maxime
+            necessitatibus a? Voluptates maiores illo quas repellendus. Rerum
+            voluptatum natus neque fugiat fuga dolor? Totam, maiores dolores.
+            <br />
+            <br />&emsp; Contacts: <br />Gmail =
+            gameboxinteractive+fncomp@gmail.com
+         </p>
       </div>
-    </div>
-    <script>
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Test-Builds.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/Test-Builds.data.gz",
-        frameworkUrl: buildUrl + "/Test-Builds.framework.js.gz",
-        codeUrl: buildUrl + "/Test-Builds.wasm.gz",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "GameboxInteractive",
-        productName: "ChessEmpires",
-        productVersion: "0.0.5",
-      };
 
-      var container = document.querySelector("#unity-container");
-      var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var mobileWarning = document.querySelector("#unity-mobile-warning");
-
-      // By default Unity keeps WebGL canvas render target size matched with
-      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-      // Set this to false if you want to decouple this synchronization from
-      // happening inside the engine, and you would instead like to size up
-      // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
-
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        container.className = "unity-mobile";
-        // Avoid draining fillrate performance on mobile devices,
-        // and default/override low DPI mode on mobile browsers.
-        config.devicePixelRatio = 1;
-        mobileWarning.style.display = "block";
-        setTimeout(() => {
-          mobileWarning.style.display = "none";
-        }, 5000);
-      } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
-      }
-      loadingBar.style.display = "block";
-
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
-    </script>
-  </body>
+      <hr />
+   </body>
 </html>
